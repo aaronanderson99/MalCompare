@@ -1,0 +1,19 @@
+Notes about Mimicus:
+
+MIMICUS = mimicus root directory
+
+=== IMPORTANT ===
+
+mimicus_cross_validate.py and mimicus_generate_attack_list.py both assume MIMICUS (that is, the root folder called "mimicus" which contains build, data, dist, etc) is located in "/home/pdfman/Downloads/project", so you'll have to change that directory in those two files to the appropriate directory.
+
+mimicus_generate_attack_list.py creates a new attack list (testing set) from the PDFs located in "MIMICUS/data/test-set". This directory can be changed in the program itself.
+
+The correct testing list (attack.list) is already generated in "MIMICUS/data". Either place the testing files in "MIMICUS/data/test-set" (and make sure you remove "CLEAN_" and "DIRTY_" from the file names), or use the aforementioned script to simply generate a new attack list using your own directory and file names.
+
+The correct models (FT-scaled.model and FTC.model) are already generated in "MIMICUS/data". To run the experiments, change the directory to "MIMICUS" and run "python reproduction/FT.py" for the first experiment, and "python reproduction/FTC.py" for the second.
+
+=== NOT SO IMPORTANT ===
+
+mimicus_cross_validate.py creates cross validated datasets. It looks at the benign PDFs in "MIMICUS/data/pdfrate/contagio-ben" and the malicious PDFs in "MIMICUS/data/pdfrate/contagio-mal" and makes cross validation CSVs and attack lists in "MIMICUS/data/newCSVs" according to which of the files in these two directories also exist in the provided files "MIMICUS/data/* - original.csv"
+
+mimicus_run_all_experiments.sh runs the FT.py and FTC.py experiments in "MIMICUS/reproduction" using the cross validated datasets, deleting old datasets and models before running new experiments and building new models (from the cross validated CSVs) as necessary. Results are output as log files in MIMICUS. If you did not generated CSVs and attack lists via the cross validation script, DO NOT run this script.

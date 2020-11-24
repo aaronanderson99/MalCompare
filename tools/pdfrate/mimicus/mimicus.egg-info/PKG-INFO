@@ -1,0 +1,11 @@
+Metadata-Version: 1.1
+Name: mimicus
+Version: 1.0
+Summary: A library for adversarial classifier evasion
+Home-page: https://github.com/srndic/mimicus
+Author: Nedim Srndic, Pavel Laskov
+Author-email: nedim.srndic@uni-tuebingen.de
+License: GPLv3
+Download-URL: https://github.com/srndic/mimicus/tarball/master
+Description: UNKNOWN
+Platform: UNKNOWN
