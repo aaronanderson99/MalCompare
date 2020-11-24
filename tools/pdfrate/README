@@ -19,5 +19,6 @@ Mimicus directory.
 
 INSTALLATION
 
-Run setup_mimicus.sh in the Mimicus directory to install dependencies.
-Run run_mimicus.sh in the Mimicus directory to run experiments.
+(Note: Both scripts assume you are currently in the mimicus directory (the same directory where these scripts are stored), and that you have already installed Python 2.7 and Pip.)
+- Run "./setup_mimicus.sh" in the mimicus directory to install dependencies.
+- Run "./run_mimicus.sh TESTDIR" in the mimicus directory to run experiments, where TESTDIR is the directory of your testing files. This will create an attack.list file containing all testing PDFs that will be run through the models, then run the experiments and output their results in results_PDFrate_RandomForest.txt and results_PDFrate_SVM.txt, both in the mimicus directory.
