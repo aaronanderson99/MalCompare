@@ -1,24 +1,35 @@
+Mimicus - open-source reimplementation of PDFrate
+
+By Nedim Srndic and Pavel Laskov, University of Tuebingen, 2014
+Practical Evasion of a Learning-Based Classifier: A Case Study
+http://www.ra.cs.uni-tuebingen.de/mitarb/srndic/srndic-laskov-sp2014.pdf
+
 PDFrate - detects malicious PDF files using metadata and structural features
 
 By C. Smutz and A. Stavrou, George Mason University, 2012
 “Malicious PDF Detection Using Metadata and Structural Features"
 https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.299.6491&rep=rep1&type=pdf
 
-Mimicus - open-source reimplementation of PDFrate with additional attacks
-
-By Nedim Srndic and Pavel Laskov, University of Tuebingen, 2014
-Practical Evasion of a Learning-Based Classifier: A Case Study
-http://www.ra.cs.uni-tuebingen.de/mitarb/srndic/srndic-laskov-sp2014.pdf
-
 
 
 DESCRIPTION
 
-For a detailed description of Mimicus, please refer to the README file in the 
-Mimicus directory.
+For a detailed description of Mimicus, please refer to the "README - Mimicus.rst" 
+file.
 
 INSTALLATION
 
-(Note: Both scripts assume you are currently in the mimicus directory (the same directory where these scripts are stored), and that you have already installed Python 2.7 and Pip.)
+(Note: Both scripts assume you are currently in the mimicus directory (the same
+directory where these scripts are stored), and that you have already installed
+Python 2.7 and Pip.)
+
 - Run "./setup_mimicus.sh" in the mimicus directory to install dependencies.
-- Run "./run_mimicus.sh TESTDIR" in the mimicus directory to run experiments, where TESTDIR is the directory of your testing files. This will create an attack.list file containing all testing PDFs that will be run through the models, then run the experiments and output their results in results_PDFrate_RandomForest.txt and results_PDFrate_SVM.txt, both in the mimicus directory.
+- Run "./run_mimicus.sh TEST_DIR" in the mimicus directory to run experiments,
+where TEST_DIR is the directory of your testing files. This will create an
+attack.list file containing all testing PDFs that will be run through the
+models, then run the experiments and output their results in
+results_PDFrate_RandomForest.txt and results_PDFrate_SVM.txt, both in the
+mimicus directory.
+- The run_mimicus.sh script only tests against the SVM model, as this returned
+the best results; however, you can instead (or additionally) run the Random
+Forest model by uncommenting the last line (removing the # sign at the start).

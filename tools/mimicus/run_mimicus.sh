@@ -17,6 +17,5 @@ rm results/FTC_mimicry/* &> /dev/null
 rm results/FT_gdkde/* &> /dev/null
 rm results/FT_mimicry/* &> /dev/null
 python mimicus_generate_attack_list.py $test_dir
-echo "Start time: $(date +"%T")"
 python reproduction/FT.py | tee "results_PDFrate_SVM.txt"
-echo "Finished running FT.py at $(date +"%T")"
+#python reproduction/FTC.py | tee "results_PDFrate_RandomForest.txt"
