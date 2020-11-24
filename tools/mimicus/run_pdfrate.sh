@@ -9,5 +9,4 @@ then
 fi
 
 echo "file:prediction"
-cat $(dirname "$0")/stored_pdfrate_output.txt
-
+./run_mimicus.sh $test_dir
