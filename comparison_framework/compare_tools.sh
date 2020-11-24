@@ -34,7 +34,7 @@ echo
 echo
 
 $(dirname "$0")/../tools/pjscan/run.sh $test_dir > $(dirname "$0")/pjscan_output.txt
-$(dirname "$0")/../tools/pdfrate/run.sh $test_dir > $(dirname "$0")/pdfrate_output.txt
+$(dirname "$0")/../tools/mimicus/run.sh $test_dir > $(dirname "$0")/pdfrate_output.txt
 $(dirname "$0")/../tools/slayer/run.sh $test_dir > $(dirname "$0")/slayer_output.txt
 $(dirname "$0")/../tools/hidost/run.sh $test_dir > $(dirname "$0")/hidost_output.txt
 touch ground_truth.txt
