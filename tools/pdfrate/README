@@ -1,0 +1,23 @@
+PDFrate - detects malicious PDF files using metadata and structural features
+
+By C. Smutz and A. Stavrou, George Mason University, 2012
+“Malicious PDF Detection Using Metadata and Structural Features"
+https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.299.6491&rep=rep1&type=pdf
+
+Mimicus - open-source reimplementation of PDFrate with additional attacks
+
+By Nedim Srndic and Pavel Laskov, University of Tuebingen, 2014
+Practical Evasion of a Learning-Based Classifier: A Case Study
+http://www.ra.cs.uni-tuebingen.de/mitarb/srndic/srndic-laskov-sp2014.pdf
+
+
+
+DESCRIPTION
+
+For a detailed description of Mimicus, please refer to the README file in the 
+Mimicus directory.
+
+INSTALLATION
+
+Run setup_mimicus.sh in the Mimicus directory to install dependencies.
+Run run_mimicus.sh in the Mimicus directory to run experiments.
