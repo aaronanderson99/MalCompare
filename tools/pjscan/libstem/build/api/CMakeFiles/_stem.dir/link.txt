@@ -1,0 +1,1 @@
+/usr/bin/c++  -fPIC  -pedantic -Wformat=2 -Wall -Wextra -O3 -DNDEBUG  -shared -Wl,-soname,_stem.so -o _stem.so CMakeFiles/_stem.dir/stemPYTHON_wrap.cxx.o -lpython2.6 ../src/libstem.so.1.0 -Wl,-rpath,/home/vagrant/6220/pjscan/libstem/build/src 

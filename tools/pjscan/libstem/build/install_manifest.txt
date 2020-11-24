@@ -1,0 +1,10 @@
+/usr/local/include/stem/NGramItem.h
+/usr/local/include/stem/NGramConf.h
+/usr/local/include/stem/NGram.h
+/usr/local/include/stem/util.h
+/usr/local/include/stem/Kernel.h
+/usr/local/lib/libstem.so.1.0
+/usr/local/lib/libstem.so
+/usr/local/lib/libstem.a
+/usr/local/lib/python2.6/dist-packages/stem.py
+/usr/local/lib/python2.6/dist-packages/_stem.so

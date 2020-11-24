@@ -1,0 +1,7 @@
+/usr/local/include/svm_oc/libsvm.h
+/usr/local/include/svm_oc/SvmOc.h
+/usr/local/lib/libsvm_oc.so.1.0
+/usr/local/lib/libsvm_oc.so
+/usr/local/lib/libsvm_oc.a
+/usr/local/lib/python2.6/dist-packages/svm_oc.py
+/usr/local/lib/python2.6/dist-packages/_svm_oc.so

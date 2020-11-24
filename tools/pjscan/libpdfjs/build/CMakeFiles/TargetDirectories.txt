@@ -1,0 +1,3 @@
+/home/vagrant/6220/pjscan/libpdfjs/build/api/CMakeFiles/_pdfjs.dir
+/home/vagrant/6220/pjscan/libpdfjs/build/src/CMakeFiles/pdfjs.dir
+/home/vagrant/6220/pjscan/libpdfjs/build/src/CMakeFiles/pdfjs-static.dir

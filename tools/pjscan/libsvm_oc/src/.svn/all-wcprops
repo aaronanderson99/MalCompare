@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/p/pjscan/code/!svn/ver/10/trunk/libsvm_oc/src
+END
+libsvm.h
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/p/pjscan/code/!svn/ver/1/trunk/libsvm_oc/src/libsvm.h
+END
+SvmOc.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/p/pjscan/code/!svn/ver/10/trunk/libsvm_oc/src/SvmOc.cpp
+END
+CMakeLists.txt
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/p/pjscan/code/!svn/ver/10/trunk/libsvm_oc/src/CMakeLists.txt
+END
+SvmOc.h
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/p/pjscan/code/!svn/ver/10/trunk/libsvm_oc/src/SvmOc.h
+END
+libsvm.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/p/pjscan/code/!svn/ver/1/trunk/libsvm_oc/src/libsvm.cpp
+END

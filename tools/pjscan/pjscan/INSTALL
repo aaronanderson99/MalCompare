@@ -1,0 +1,69 @@
+INSTALLATION NOTES
+
+Copyright 2012 Nedim Srndic, University of Tuebingen
+nedimsrndic AT users DOT sf DOT net
+
+SUPPORTED PLATFORMS AND PORTING
+
+PJScan has been successfully installed on 64-bit Ubuntu 10.10 and 11.04. Other 
+configurations have not been tested. If you succeed deploying PJScan to other 
+operating systems or computer architectures, please notify the maintainer. 
+
+Porting to POSIX systems other than Linux might require replacing the 
+Linux-specific splice() system call from pjscan-child.cpp with a read()-write() 
+loop. Porting to non-POSIX systems may require somewhat more work as pipe(), 
+fork(), execl(), read(), write(), splice(), dup2(), fcntl(), getuid(), 
+geteuid() and possibly some other calls need to be replaced. Fortunately, they 
+are located in 3 source files: pjscan.cpp, pjscan-child.cpp and 
+WorkerThread.cpp. 
+
+PREREQUISITES
+
+The following Debian packages are used: 
+
+	cmake 
+	g++ 
+	libboost-thread-dev 
+	libboost-filesystem-dev
+	libargtable2-dev
+
+The following custom libraries are required:
+
+	libpdfjs	(available at http://sf.net/p/libpdfjs)
+	libstem		(shipped with PJScan)
+	libsvm_oc	(shipped with PJScan)
+	pjscan-js	(shipped with PJScan)
+
+INSTALLATION PROCEDURE
+
+The recommended method of installation is as follows:
+
+	0. Install prerequisites
+	1. Go to the project root
+	2. Make a new directory (e. g. 'build') and go to this directory. 
+	3. Run cmake with all the options. This way the source will be built out of 
+	the source directory. The options are as follows: 
+		a) -DCMAKE_BUILD_TYPE={Release, Debug} - builds a release or debug 
+		configuration. Release configuration is recommended (enables compiler 
+		optimizations). 
+	4. Run make
+	5. As root, run make install
+
+A convenience script is provided to make the installation simpler. It is 
+located in the parent directory and is called 'install.sh'. However, it 
+was only tested on Ubuntu 10.10 and 11.04. We recommend installing the software 
+step by step. 
+
+EXAMPLE
+
+This is an example for the installation of PJScan. In this example, PJScan was 
+located in the '/home/user123/sources/pjscan/' directory. Note that you need 
+to install the prerequisite custom libraries first.
+
+sudo apt-get install cmake g++ libboost-thread-dev libboost-filesystem-dev \
+libargtable2-dev
+cd /home/user123/sources/pjscan/
+mkdir build; cd build
+cmake -DCMAKE_BUILD_TYPE=Release ..
+make
+sudo make install

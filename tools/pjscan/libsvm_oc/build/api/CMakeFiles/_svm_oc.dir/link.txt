@@ -1,0 +1,1 @@
+/usr/bin/c++  -fPIC  -pedantic -Wformat=2 -Wall -Wextra -O3 -DNDEBUG  -shared -Wl,-soname,_svm_oc.so -o _svm_oc.so CMakeFiles/_svm_oc.dir/svm_ocPYTHON_wrap.cxx.o -lpython2.6 -lstem ../src/libsvm_oc.so.1.0 -lstem -Wl,-rpath,/home/vagrant/6220/pjscan/libsvm_oc/build/src 

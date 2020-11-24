@@ -1,0 +1,1 @@
+/usr/bin/c++  -fPIC  -pedantic -Wformat=2 -Wall -Wextra -O3 -DNDEBUG  -shared -Wl,-soname,libstem.so.1.0 -o libstem.so.1.0 CMakeFiles/stem.dir/NGram.cpp.o CMakeFiles/stem.dir/NGramConf.cpp.o CMakeFiles/stem.dir/NGramItem.cpp.o CMakeFiles/stem.dir/Kernel.cpp.o CMakeFiles/stem.dir/util.cpp.o 

@@ -1,0 +1,1 @@
+/usr/bin/c++    -pedantic -Wformat=2 -Wall -Wextra -O3 -DNDEBUG   CMakeFiles/pjscan-child.dir/pjscan-child.cpp.o CMakeFiles/pjscan-child.dir/timing.cpp.o  -o pjscan-child-1.0 -rdynamic -lpdfjs 

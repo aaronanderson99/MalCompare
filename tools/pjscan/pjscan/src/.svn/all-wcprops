@@ -1,0 +1,131 @@
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/p/pjscan/code/!svn/ver/16/trunk/pjscan/src
+END
+JsDumper.h
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/p/pjscan/code/!svn/ver/10/trunk/pjscan/src/JsDumper.h
+END
+pjscan-child.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/p/pjscan/code/!svn/ver/10/trunk/pjscan/src/pjscan-child.cpp
+END
+FeaturePrinter.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/p/pjscan/code/!svn/ver/10/trunk/pjscan/src/FeaturePrinter.cpp
+END
+WorkerThread.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/p/pjscan/code/!svn/ver/10/trunk/pjscan/src/WorkerThread.cpp
+END
+ThreadPool.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/p/pjscan/code/!svn/ver/10/trunk/pjscan/src/ThreadPool.cpp
+END
+tokens.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/p/pjscan/code/!svn/ver/10/trunk/pjscan/src/tokens.cpp
+END
+ThreadSafeMap.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/p/pjscan/code/!svn/ver/10/trunk/pjscan/src/ThreadSafeMap.cpp
+END
+FeaturePrinter.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/p/pjscan/code/!svn/ver/10/trunk/pjscan/src/FeaturePrinter.h
+END
+ThreadPool.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/p/pjscan/code/!svn/ver/10/trunk/pjscan/src/ThreadPool.h
+END
+WorkerThread.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/p/pjscan/code/!svn/ver/10/trunk/pjscan/src/WorkerThread.h
+END
+tokens.h
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/p/pjscan/code/!svn/ver/10/trunk/pjscan/src/tokens.h
+END
+ThreadSafeMap.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/p/pjscan/code/!svn/ver/10/trunk/pjscan/src/ThreadSafeMap.h
+END
+pjscan.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/p/pjscan/code/!svn/ver/14/trunk/pjscan/src/pjscan.cpp
+END
+Classifier.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/p/pjscan/code/!svn/ver/16/trunk/pjscan/src/Classifier.cpp
+END
+timing.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/p/pjscan/code/!svn/ver/16/trunk/pjscan/src/timing.cpp
+END
+Learner.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/p/pjscan/code/!svn/ver/16/trunk/pjscan/src/Learner.cpp
+END
+JsDumper.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/p/pjscan/code/!svn/ver/10/trunk/pjscan/src/JsDumper.cpp
+END
+Classifier.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/p/pjscan/code/!svn/ver/10/trunk/pjscan/src/Classifier.h
+END
+timing.h
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/p/pjscan/code/!svn/ver/11/trunk/pjscan/src/timing.h
+END
+CMakeLists.txt
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/p/pjscan/code/!svn/ver/13/trunk/pjscan/src/CMakeLists.txt
+END
+Learner.h
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/p/pjscan/code/!svn/ver/13/trunk/pjscan/src/Learner.h
+END

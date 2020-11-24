@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/p/pjscan/code/!svn/ver/10/trunk/pjscan-js
+END
+INSTALL
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/p/pjscan/code/!svn/ver/10/trunk/pjscan-js/INSTALL
+END
+pjscan-js.patch
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/p/pjscan/code/!svn/ver/2/trunk/pjscan-js/pjscan-js.patch
+END
+COPYING
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/p/pjscan/code/!svn/ver/2/trunk/pjscan-js/COPYING
+END
+CMakeLists.txt
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/p/pjscan/code/!svn/ver/10/trunk/pjscan-js/CMakeLists.txt
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/p/pjscan/code/!svn/ver/10/trunk/pjscan-js/README
+END

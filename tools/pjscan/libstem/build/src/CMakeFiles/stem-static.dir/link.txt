@@ -1,0 +1,2 @@
+/usr/bin/ar cr libstem.a  CMakeFiles/stem-static.dir/NGram.cpp.o CMakeFiles/stem-static.dir/NGramConf.cpp.o CMakeFiles/stem-static.dir/NGramItem.cpp.o CMakeFiles/stem-static.dir/Kernel.cpp.o CMakeFiles/stem-static.dir/util.cpp.o
+/usr/bin/ranlib libstem.a

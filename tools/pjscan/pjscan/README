@@ -1,0 +1,142 @@
+PJScan - detects malicious PDF files based on the contents of their JavaScript 
+code.
+
+Copyright 2012 Nedim Srndic, University of Tuebingen
+nedimsrndic AT users DOT sf DOT net
+
+DESCRIPTION
+
+A detailed description of the detection technique used in PJScan is provided in 
+the paper "Static Detection of Malicious JavaScript-Bearing PDF Documents" 
+presented at ACSAC 2011: 
+	- website: http://www.acsac.org/2011/openconf/modules/request.php?module=oc_program&action=summary.php&id=125&OPENCONF=6dc7d5e358cb62f894fdfc5d139670aa
+	- pdf: http://www.acsac.org/2011/openconf/modules/request.php?module=oc_program&action=view.php&a=&id=125&type=2
+	- bib: http://sourceforge.net/projects/pjscan/files/citation.bib/download 
+
+PJScan is a command-line utility that uses a learning algorithm to detect 
+PDF files with JavaScript-related malware (i.e., malicious PDF files). This is 
+accomplished in a two-step process: 
+
+	1. Learning a model of malicious files. 
+		This step consists of applying PJScan's learning algorithm on a 
+		collection of malicious PDF files. PJScan analyzes these files, 
+		extracts JavaScript scripts from them (using libpdfjs) and applies a 
+		JavaScript tokenizer (pjscan-js, a modified version of Mozilla 
+		SpiderMonkey) in order to obtain 
+		the lexical properties of the scripts. The token sequences are then 
+		used as input (converted by libstem) for the machine learning algorithm 
+		(a One-class Support Vector Machine implementation called libsvm_oc, 
+		based on libsvm), which outputs a model of known malicious PDF files. 
+		This model (saved as a file) is used as the input to the second step. 
+		
+	2. Classification of previously unseen files.
+		After a model of PDF files that are known to be malicious has been 
+		learned, it's used for the classification of previously unseen PDF 
+		files. Every PDF file to be classified has its JavaScript scripts 
+		extracted, tokenized and converted for use with the learning algorithm. 
+		Finally, the learning algorithm compares this information with the 
+		learned model and classifies the file as malicous or benign. 
+		
+In addition to learning and classification, PJScan also features some useful 
+diagnostic tools: 
+
+	1. Dumping all JavaScript scripts from a PDF file.
+		You can use this tool to extract the source code of all JavaScript 
+		scripts from a certain PDF file for further analysis. The scripts are 
+		saved as UTF-8-encoded text files with a .js extension in a directory. 
+	
+	2. Analysis of machine learning features. 
+		Top N machine learning features are extracted from a PDF file and 
+		printed in comparison with the features found in a previously learned 
+		model. This is useful for the analysis of the impact of individual 
+		features of JavaScript code on the classification result. 
+
+PJScan is written in C++ and uses a number of third-party and purpose-built 
+software libraries. It currently only runs on Linux, but this might change in 
+the future (please see the INSTALL file for more details). The following Debian 
+packages are used: 
+
+	cmake	(used for source code building)
+	g++		(C++ compiler)
+	libboost-thread-dev		(threading)
+	libboost-filesystem-dev	(file system)
+	libargtable2-dev	(command-line argument parsing)
+
+The following custom libraries are required:
+
+	libpdfjs	(available at http://sf.net/p/libpdfjs)
+	libstem		(shipped with PJScan)
+	libsvm_oc	(shipped with PJScan)
+	a patched version of Mozilla SpiderMonkey	(shipped with PJScan)
+
+INSTALLATION
+
+For installation instructions, please refer to the INSTALL file. 
+
+HOW TO RUN
+
+Depending on the desired functionality, PJScan can be run in one of the 
+following modes:
+
+	- Learning mode: 
+		Invocation: 
+			pjscan learn [--nu=<double>] <model file> <PDF directory>
+		In this mode, a model file with the specified file name is 
+		learned from a set of malicious PDF files found in the specified 
+		directory. The optional nu argument controls the One-class SVM. If not 
+		specified, a default of 0.05 is used.
+		
+	- Classification mode: 
+		Invocation:
+			pjscan classify <model file> <PDF directory>
+		In this mode, the specified model file is used to classify 
+		unseen PDF files located in the specified directory. 
+		
+	- JavaScript dump mode: 
+		Invocation: 
+			pjscan dumpjs <PDF file> <dump directory>
+		In this mode, all JavaScript scripts from the specified PDF file 
+		are dumped to the specified directory. 
+		 
+	- Feature printing mode: 
+		Invocation: 
+			pjscan printfeats <PDF file> <model file> <feature count>
+		In this mode, the top N machine learning features are extracted from 
+		the specified PDF file and printed in comparison with the 
+		features found in the specified model file.
+
+USAGE EXAMPLES
+
+Training example
+
+The first step in the use of PJScan is to learn a model of malicious data. 
+If you have a directory with some malicious PDF files called 
+'/home/user123/pdfs/malicious/', you can generate a model file called 
+'first_model' with a nu value of 0.1 at this location '/home/user123/models/' 
+using the following command: 
+
+pjscan learn --nu=0.1 /home/user123/models/first_model /home/user123/pdfs/malicious
+
+Classification example
+
+Now that you have a model file, you can use it to classify PDF files that you 
+don't know if they are malicious or benign. If you have some PDF files in the 
+directory '/home/user123/pdfs/unknown/', you can classify them using the 
+previously learned model using the following command: 
+
+pjscan classify /home/user123/models/first_model /home/user123/pdfs/unknown
+
+JavaScript dump example
+
+To dump all the JavaScript from a PDF file located at /home/user123/my.pdf into 
+the directory /home/user123/jsdump/, run PJScan using the following command: 
+
+pjscan dumpjs /home/user123/my.pdf /home/user123/jsdump
+
+Feature printing example
+
+To compare top 10 features from a model file located in 
+/home/user123/models/first_model and a PDF file in /home/user123/my.pdf, run 
+PJScan using the following command: 
+
+pjscan printfeats /home/user123/my.pdf /home/user123/models/first_model 10

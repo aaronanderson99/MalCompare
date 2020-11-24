@@ -1,0 +1,97 @@
+diff -rupN js-1.8.5//js/src/jsscan.cpp js-1.8.5-patched//js/src/jsscan.cpp
+--- js-1.8.5//js/src/jsscan.cpp	2011-03-31 21:08:36.000000000 +0200
++++ js-1.8.5-patched//js/src/jsscan.cpp	2011-10-13 11:19:36.128808001 +0200
+@@ -170,6 +170,14 @@ TokenStream::TokenStream(JSContext *cx)
+ bool
+ TokenStream::init(const jschar *base, size_t length, const char *fn, uintN ln, JSVersion v)
+ {
++    /*
++     * Patched by Nedim Srndic. 
++     */
++    this->hasGot = false;
++    this->prev_token = TOK_EOF;
++    /*
++     * End of patch. 
++     */
+     filename = fn;
+     lineno = ln;
+     version = v;
+diff -rupN js-1.8.5//js/src/jsscan.h js-1.8.5-patched//js/src/jsscan.h
+--- js-1.8.5//js/src/jsscan.h	2011-03-31 21:08:36.000000000 +0200
++++ js-1.8.5-patched//js/src/jsscan.h	2011-10-13 11:19:36.128808001 +0200
+@@ -388,12 +388,38 @@ class TokenStream
+             flags &= ~flag;
+     }
+ 
++    /*
++     * Patched by Nedim Srndic.
++     */
++    TokenKind prev_token;
++    bool hasGot;
++    /*
++     * End of patch. 
++     */
+   public:
+     /*
++     * Patched by Nedim Srndic.
++     */
++    TokenKind getToken() {
++        TokenKind tk = oldGetToken();
++        if (hasGot) {
++            printf("%d ", prev_token);
++        }
++        hasGot = true;
++        prev_token = tk;
++        if (tk == TOK_ERROR || tk == TOK_EOF) {
++            printf("%d ", prev_token);
++            exit(0);
++        }
++        
++        return tk;
++    }
++     
++    /*
+      * Get the next token from the stream, make it the current token, and
+      * return its kind.
+      */
+-    TokenKind getToken() {
++    TokenKind oldGetToken() {
+         /* Check for a pushed-back token resulting from mismatching lookahead. */
+         while (lookahead != 0) {
+             JS_ASSERT(!(flags & TSF_XMLTEXTMODE));
+@@ -411,6 +437,9 @@ class TokenStream
+ 
+         return getTokenInternal();
+     }
++    /*
++     * End of patch. 
++     */
+ 
+     /* Similar, but also sets flags. */
+     TokenKind getToken(uintN withFlags) {
+@@ -419,13 +448,24 @@ class TokenStream
+     }
+ 
+     /*
+-     * Push the last scanned token back into the stream.
++     * Patched by Nedim Srndic.
+      */
+     void ungetToken() {
++        oldUngetToken();
++        hasGot = false;
++    }
++    
++    /*
++     * Push the last scanned token back into the stream.
++     */
++    void oldUngetToken() {
+         JS_ASSERT(lookahead < ntokensMask);
+         lookahead++;
+         cursor = (cursor - 1) & ntokensMask;
+     }
++    /*
++     * End of patch. 
++     */
+ 
+     TokenKind peekToken(uintN withFlags = 0) {
+         Flagger flagger(this, withFlags);

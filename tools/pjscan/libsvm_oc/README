@@ -1,0 +1,29 @@
+libsvm_oc - a modification of libsvm to enable support for libstem n-gram 
+objects. 
+
+Copyright 2012 Nedim Srndic, Pavel Laskov, University of Tuebingen
+nedimsrndic AT users DOT sf DOT net
+plaskov AT users DOT sf DOT net
+
+ABOUT
+
+libsvm_oc is a library for One-Class Support Vector Machines (SVMs) that 
+operate on n-gram objects from the libstem library. It uses libsvm patched with 
+the SVDD patch for one-class SVM support, and extends it to support libstem 
+n-gram objects. 
+
+libsvm_oc is licensed under the GNU GPL version 3 or any later version.
+
+Homepage for the libsvm project:
+http://www.csie.ntu.edu.tw/~cjlin/libsvm/
+The SVDD patch:
+http://www.csie.ntu.edu.tw/~cjlin/libsvmtools/#libsvm_for_svdd_and_finding_the_smallest_sphere_containing_all_data
+
+The library is currently distributed as a part of PJScan. It is not considered 
+feature-complete nor ready to be used as a stand-alone One-Class Support Vector 
+Machine library because of stability reasons. 
+
+INSTALLATION
+
+For installation instructions, please refer to the INSTALL file. 
+

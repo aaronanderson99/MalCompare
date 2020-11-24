@@ -1,0 +1,4 @@
+/usr/local/bin/pjscan
+/usr/local/bin/pjscan-1.0
+/usr/local/bin/pjscan-child
+/usr/local/bin/pjscan-child-1.0

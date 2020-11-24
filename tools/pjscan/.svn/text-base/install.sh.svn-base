@@ -1,0 +1,76 @@
+#!/bin/bash
+###############################################################################
+#
+# Copyright 2012 Nedim Srndic, University of Tuebingen
+# nedimsrndic AT users DOT sf DOT net
+# 
+# PJScan installation script
+# 
+# Installs all the prerequisites and then PJScan itself. Builds all APIs and 
+# tests. 
+# The following items are installed: 
+#   0. Required Debian packages:
+#      g++
+#      cmake
+#      libpoppler-dev
+#      swig
+#      python-dev
+#      libboost-test-dev
+#      libboost-thread-dev
+#      libboost-filesystem-dev
+#      patch
+#      libargtable2-dev
+#   1. libpdfjs (from http://sf.net/p/libpdfjs)
+#   2. pjscan-js (from http://ftp.mozilla.org/pub/mozilla.org/js/js185-1.0.0.tar.gz , patch bundled with PJScan)
+#   3. libstem (bundled with PJScan)
+#   4. libsvm_oc (bundled with PJScan)
+#   5. PJScan
+# 
+###############################################################################
+
+set -o nounset # stops the script if a variable wasn't set
+set -o errexit # exits the script if any statement returns a non-true return value
+
+# Install Debian packages
+sudo apt-get install g++ cmake libpoppler-dev swig python-dev libboost-test-dev libboost-thread-dev libboost-filesystem-dev patch libargtable2-dev
+
+# Install libpdfjs
+mkdir -p libpdfjs/build-release/
+cd libpdfjs/build-release/
+cmake -DCMAKE_BUILD_TYPE=Release -DMAKE_API=1 ..
+sudo make
+cd ../../
+
+# Install pjscan-js
+mkdir -p pjscan-js/build-release/
+cd pjscan-js/build-release/
+cmake -DCMAKE_BUILD_TYPE=Release ..
+make
+sudo make install
+cd ../../
+
+# Install libstem
+mkdir -p libstem/build-release/
+cd libstem/build-release/
+cmake -DMAKE_API=1 -DMAKE_TESTS=1 -DCMAKE_BUILD_TYPE=Release ..
+make
+./test/test_kernel
+./test/test_ngram
+sudo make install
+cd ../../
+
+# Install libsvm_oc
+mkdir -p libsvm_oc/build-release/
+cd libsvm_oc/build-release/
+cmake -DMAKE_API=1 -DCMAKE_BUILD_TYPE=Release ..
+make
+sudo make install
+cd ../../
+
+# Install PJScan 
+mkdir -p pjscan/build-release/
+cd pjscan/build-release/
+cmake -DCMAKE_BUILD_TYPE=Release ..
+make
+sudo make install
+cd ../../

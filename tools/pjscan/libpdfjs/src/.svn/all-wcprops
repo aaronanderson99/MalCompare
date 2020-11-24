@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/p/libpdfjs/code/!svn/ver/11/trunk/src
+END
+PdfJsExtractor.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/p/libpdfjs/code/!svn/ver/11/trunk/src/PdfJsExtractor.cpp
+END
+PdfJsExtractor.h
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/p/libpdfjs/code/!svn/ver/9/trunk/src/PdfJsExtractor.h
+END
+CMakeLists.txt
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/p/libpdfjs/code/!svn/ver/7/trunk/src/CMakeLists.txt
+END

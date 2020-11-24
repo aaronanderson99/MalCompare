@@ -1,0 +1,49 @@
+libpdfjs - a library that extracts JavaScript code from PDF files
+
+Copyright 2012 Nedim Srndic, University of Tuebingen
+nedimsrndic AT users DOT sf DOT net
+
+ABOUT
+
+libpdfjs is a library that extracts JavaScript code from PDF files.
+
+The library is written in C++ with a very simple API, and Python bindings are 
+provided. It utilizes the Poppler library to parse PDF files and looks for the 
+spots in a PDF file where JavaScript is expected. The returned JavaScript 
+scripts are UTF-8-encoded.
+
+The library has been tested on tens of thousands of different, both valid and 
+malformed, PDF files. 
+
+libpdfjs has been been described in the paper Static Detection of Malicious JavaScript-Bearing PDF Documents (http://www.acsac.org/2011/openconf/modules/request.php?module=oc_program&action=summary.php&id=125&OPENCONF=ca81d4be2aef4c7459d80ae88d624465) at the ACSAC 2011. 
+
+LICENSE
+
+libpdfjs is licensed under the GNU GPL version 3 or any later version. Please 
+see the COPYING file. 
+
+INSTALLATION
+
+For installation instructions, please refer to the INSTALL file. 
+
+USAGE EXAMPLE
+
+Please see the file test/test.cpp for a C++ usage example. Instructions to 
+build this example are provided in the INSTALL file.
+The Python usage example can be found in the file test/test.py. 
+
+Make sure to change the PDF file path before running the examples. 
+
+KNOWN BUGS
+
+There are significant memory leaks in the Poppler library that make it 
+unsuitable for batch scanning of thousands of PDF files. For these purposes, 
+it is recommended to use multiple processes. 
+
+When scanning some (usually malformed) PDF files, the Poppler library is known 
+to call the std::exit() function. If you do not want your program to be 
+terminated in these cases, use a separate process.
+
+When scanning some (usually malformed) PDF files, the Poppler library is known 
+to enter an endless loop (or at least a very long one). If you do not want your 
+program to wait in these cases, use a separate thread.

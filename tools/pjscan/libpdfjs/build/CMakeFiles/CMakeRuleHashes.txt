@@ -1,0 +1,2 @@
+# Hashes of file build rules.
+f8b0d3706c52fe51089e18ab10b51058 api/PdfJsExtractorPYTHON_wrap.cxx

@@ -1,0 +1,1 @@
+/usr/bin/c++  -fPIC  -pedantic -Wformat=2 -Wall -Wextra -O3 -DNDEBUG  -shared -Wl,-soname,libsvm_oc.so.1.0 -o libsvm_oc.so.1.0 CMakeFiles/svm_oc.dir/libsvm.cpp.o CMakeFiles/svm_oc.dir/SvmOc.cpp.o -lstem 

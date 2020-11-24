@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/p/pjscan/code/!svn/ver/16/trunk/pjscan
+END
+INSTALL
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/p/pjscan/code/!svn/ver/13/trunk/pjscan/INSTALL
+END
+CHANGELOG
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/p/pjscan/code/!svn/ver/13/trunk/pjscan/CHANGELOG
+END
+COPYING
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/p/pjscan/code/!svn/ver/1/trunk/pjscan/COPYING
+END
+CMakeLists.txt
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/p/pjscan/code/!svn/ver/15/trunk/pjscan/CMakeLists.txt
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/p/pjscan/code/!svn/ver/13/trunk/pjscan/README
+END

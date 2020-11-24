@@ -1,0 +1,27 @@
+pjscan-js - JavaScript tokenizer.
+
+Copyright 2012 Nedim Srndic, University of Tuebingen
+nedimsrndic AT users DOT sf DOT net
+
+DESCRIPTION
+
+This project consists of a small patch to the Mozilla Spidermonkey JavaScript 
+engine, that makes the engine output lexical tokens of the specified JavaScript 
+source code. The tokens are encoded as numerical values that are used as input 
+to other parts of PJScan. The engine is modified to exit before any JavaScript 
+source code is actually executed for performance and security reasons. 
+
+The patch consists of two files in the unified diff format: 
+	1. jsscan.h.patch
+	2. jsscan.cpp.patch
+
+The patch is released under the GNU General Public License version 3 or any 
+later version. 
+
+Homepage of Mozilla SpiderMonkey:
+http://www.mozilla.org/js/spidermonkey/
+
+INSTALLATION
+
+For installation instructions, please refer to the INSTALL file. 
+

@@ -1,0 +1,47 @@
+INSTALLATION NOTES
+
+Copyright 2012 Nedim Srndic, University of Tuebingen
+nedimsrndic AT users DOT sf DOT net
+
+libpdfjs has been successfully installed on Ubuntu 10.10 and 11.04. Other 
+configurations have not been tested.
+
+PREREQUISITES
+
+The following Debian packages are required: 
+
+	cmake 
+	libpoppler-dev 
+	g++ 
+	swig (optional, used for Python API)
+	python-dev (optional, used for Python API)
+
+INSTALLATION PROCEDURE
+
+The recommended method of installation is as follows:
+
+	0. Install prerequisites
+	1. Go to the project root
+	2. Make a new directory (e. g. 'build') and go to this directory. 
+	3. Run cmake with all the options. This way the source will be built out of 
+	the source directory. The options are as follows: 
+		a) -DMAKE_API=1 - makes a Python API 
+		b) -DCMAKE_BUILD_TYPE={Release, Debug} - builds a release or debug 
+		configuration. Release configuration is recommended (enables compiler 
+		optimizations). 
+		c) -DMAKE_TESTS=1 - builds the test example
+	4. Run make
+	5. As root, run make install
+
+EXAMPLE
+
+In this example, libpdfjs source is located in the 
+'/home/user123/sources/libpdfjs/' directory. The Python API and the test 
+examples are built as well.
+
+sudo apt-get install cmake libpoppler-dev g++ swig python-dev
+cd /home/user123/sources/libpdfjs/
+mkdir build; cd build
+cmake -DMAKE_API=1 -DMAKE_TESTS=1 -DCMAKE_BUILD_TYPE=Release ..
+make
+sudo make install

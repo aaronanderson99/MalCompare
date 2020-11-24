@@ -1,0 +1,22 @@
+PJScan - detects malicious PDF files based on the contents of their JavaScript 
+code.
+
+Copyright 2012 Nedim Srndic, University of Tuebingen
+nedimsrndic AT users DOT sf DOT net
+
+DESCRIPTION
+
+For a detailed description of PJScan, please refer to the README file in the 
+pjscan directory. 
+
+A detailed description of the detection technique used in PJScan is provided in 
+the paper "Static Detection of Malicious JavaScript-Bearing PDF Documents" 
+presented at ACSAC 2011: 
+	- website: http://www.acsac.org/2011/openconf/modules/request.php?module=oc_program&action=summary.php&id=125&OPENCONF=6dc7d5e358cb62f894fdfc5d139670aa
+	- pdf: http://www.acsac.org/2011/openconf/modules/request.php?module=oc_program&action=view.php&a=&id=125&type=2
+	- bib: http://sourceforge.net/projects/pjscan/files/citation.bib/download
+
+INSTALLATION
+
+For installation instructions, please refer to the INSTALL file. 
+

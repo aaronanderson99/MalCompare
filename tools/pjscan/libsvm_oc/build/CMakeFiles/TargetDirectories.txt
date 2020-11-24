@@ -1,0 +1,3 @@
+/home/vagrant/6220/pjscan/libsvm_oc/build/api/CMakeFiles/_svm_oc.dir
+/home/vagrant/6220/pjscan/libsvm_oc/build/src/CMakeFiles/svm_oc.dir
+/home/vagrant/6220/pjscan/libsvm_oc/build/src/CMakeFiles/svm_oc-static.dir

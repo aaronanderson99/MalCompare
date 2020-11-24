@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/vagrant/6220/pjscan/pjscan/src/pjscan-child.cpp
+cstdio
+-
+cstdlib
+-
+climits
+-
+sys/types.h
+-
+sys/wait.h
+-
+sys/stat.h
+-
+fcntl.h
+-
+unistd.h
+-
+errno.h
+-
+pdfjs/PdfJsExtractor.h
+-
+timing.h
+/home/vagrant/6220/pjscan/pjscan/src/timing.h
+
+/home/vagrant/6220/pjscan/pjscan/src/timing.cpp
+timing.h
+/home/vagrant/6220/pjscan/pjscan/src/timing.h
+
+/home/vagrant/6220/pjscan/pjscan/src/timing.h
+sys/time.h
+-
+

@@ -1,0 +1,2 @@
+/home/vagrant/6220/pjscan/pjscan/build/src/CMakeFiles/pjscan.dir
+/home/vagrant/6220/pjscan/pjscan/build/src/CMakeFiles/pjscan-child.dir

@@ -1,0 +1,3 @@
+/home/vagrant/6220/pjscan/libstem/build/api/CMakeFiles/_stem.dir
+/home/vagrant/6220/pjscan/libstem/build/src/CMakeFiles/stem.dir
+/home/vagrant/6220/pjscan/libstem/build/src/CMakeFiles/stem-static.dir

@@ -1,0 +1,26 @@
+Changelog for libpdfjs
+
+Copyright 2012 Nedim Srndic, University of Tuebingen
+nedimsrndic AT users DOT sf DOT net
+
+13. Jun 2012, Version 1.1.1
+
+- Fixed a bug with PdfJsExtractor::globalParams overriding the global variable in Poppler with the same name (thanks to Moritz Bechler)
+- Added a check for null pointer that sometimes caused a segmentation fault (thanks to Moritz Bechler)
+
+26. Oct 2011, Version 1.1
+
+- Fixed a bug in PdfJsExtractor::getJsFromAction() that prevented non-PDFDocEncoded JavaScript strings from being retrieved. Also a possible memory leak was found and fixed. 
+- Changed Poppler query strings from const char* to char* to avoid boring compiler warnings. 
+- Simplified the code that handles Poppler Object-s to avoid manual allocation and deleting. 
+
+07. Oct 2011, Version 1.0.1
+
+- Release to SourceForge
+- Added the test directory with usage examples for C++ and Python
+- Improved source code comments
+- Improved CMake files to support deliverable versioning
+
+12. May 2011, Version 1.0
+
+- Initial release

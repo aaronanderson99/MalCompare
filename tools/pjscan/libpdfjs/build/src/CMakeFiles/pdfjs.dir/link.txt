@@ -1,0 +1,1 @@
+/usr/bin/c++  -fPIC  -pedantic -Wformat=2 -Wall -Wextra -O3 -DNDEBUG  -shared -Wl,-soname,libpdfjs.so.1.1.1 -o libpdfjs.so.1.1.1 CMakeFiles/pdfjs.dir/PdfJsExtractor.cpp.o -lpoppler 

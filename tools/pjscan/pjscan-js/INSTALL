@@ -1,0 +1,50 @@
+INSTALLATION NOTES
+
+Copyright 2012 Nedim Srndic, University of Tuebingen
+nedimsrndic AT users DOT sf DOT net
+
+pjscan-js has been successfully installed on Ubuntu 10.10 and 11.04. Other 
+configurations have not been tested, but it is expected that it can be deployed 
+everywhere where SpiderMonkey can. 
+
+PREREQUISITES
+
+To install pjscan-js, you need make. 
+
+INSTALLATION PROCEDURE
+
+To install the modified SpiderMonkey engine, follow these steps:
+
+	1. Obtain a recent version of SpiderMonkey from Mozilla. 
+	For the purposes of PJScan, version 185 was used, downloaded from 
+	http://ftp.mozilla.org/pub/mozilla.org/js/js185-1.0.0.tar.gz
+	
+	2. Apply the patches. 
+	Use the patch utility to apply the patch files to the original source code. 
+	
+	3. Build the source code. 
+	Run the configure script and the make utility. 
+	
+	4. Install the executable. 
+	Rename the resulting executable to pjscan-js and copy it to the 
+	/usr/local/bin directory. The resulting shared library is not used. 
+
+The above steps can be automated (make sure that your local directory contains 
+the patch files before running the commands below): 
+
+# Step 1
+wget http://ftp.mozilla.org/pub/mozilla.org/js/js185-1.0.0.tar.gz
+tar xvfz js185-1.0.0.tar.gz
+
+# Step 2
+cd js-1.8.5/js/src
+patch <../../../jsscan.h.patch
+patch <../../../jsscan.cpp.patch
+
+# Step 3
+mkdir build-release; cd build-release
+../configure
+make
+
+# Step 4
+sudo cp ./js /usr/local/bin/pjscan-js

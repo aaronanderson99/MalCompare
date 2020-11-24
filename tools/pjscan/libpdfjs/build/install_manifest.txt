@@ -1,0 +1,6 @@
+/usr/local/include/pdfjs/PdfJsExtractor.h
+/usr/local/lib/libpdfjs.so.1.1.1
+/usr/local/lib/libpdfjs.so
+/usr/local/lib/libpdfjs.a
+/usr/local/lib/python2.6/dist-packages/pdfjs.py
+/usr/local/lib/python2.6/dist-packages/_pdfjs.so

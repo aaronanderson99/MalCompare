@@ -1,0 +1,25 @@
+libstem - a library for embedding of string n-grams into vector spaces and 
+kernel computation
+
+Copyright 2012 Nedim Srndic, Pavel Laskov, University of Tuebingen
+nedimsrndic AT users DOT sf DOT net
+plaskov AT users DOT sf DOT net
+
+DESCRIPTION
+
+libstem is a library for embedding of string n-grams into vector spaces. It 
+supports different embeddings (count, frequency, binary, normalized and
+binary normalized), operations between n-grams (addition, subtraction, dot 
+product, multiplication with a constant) and computation of different kernels 
+(linear and radial basis function kernels). 
+
+libstem is licensed under the GNU GPL version 3 or any later version.
+
+The library is currently distributed as a part of PJScan. It is not considered 
+feature-complete nor ready to be used as a stand-alone embedding library 
+because of performance reasons. 
+
+INSTALLATION
+
+For installation instructions, please refer to the INSTALL file. 
+

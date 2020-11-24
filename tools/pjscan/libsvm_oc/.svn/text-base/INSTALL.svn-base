@@ -1,0 +1,47 @@
+INSTALLATION NOTES
+
+Copyright 2012 Nedim Srndic, University of Tuebingen
+nedimsrndic AT users DOT sf DOT net
+
+libsvm_oc has been successfully installed on Ubuntu 10.10 and 11.04. Other 
+configurations have not been tested. The library does not link to any third 
+party code, so in theory it should be portable to other operating systems and 
+architectures with some effort. If you succeed in doing that, please notify 
+the maintainer. 
+
+PREREQUISITES
+
+The following Debian packages are required: 
+
+	cmake	(source code building)
+	g++ 	(compiler)
+	swig	(optional, used for Python API generation)
+	python-dev	(optional, used for Python API)
+
+INSTALLATION PROCEDURE
+
+The recommended method of installation is as follows:
+
+	0. Install prerequisites
+	1. Go to the project root 
+	2. Make a new directory (e. g. 'build') and go to this directory. 
+	3. Run cmake with all the options. This way the source will be built out of 
+	the source directory. The options are as follows: 
+		a) -DMAKE_API=1 - makes a Python API 
+		b) -DCMAKE_BUILD_TYPE={Release, Debug} - builds a release or debug 
+		configuration. Release configuration is recommended (enables compiler 
+		optimizations). 
+	4. Run make
+	5. As root, run make install
+
+EXAMPLE
+
+In this example, libsvm_oc source is located in the 
+'/home/user123/sources/libsvm_oc/' directory. The Python API is built as well.
+
+sudo apt-get install cmake g++ swig python-dev
+cd /home/user123/sources/libsvm_oc/
+mkdir build; cd build
+cmake -DMAKE_API=1 -DCMAKE_BUILD_TYPE=Release ..
+make
+sudo make install

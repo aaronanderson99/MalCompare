@@ -1,0 +1,52 @@
+INSTALLATION NOTES
+
+Copyright 2012 Nedim Srndic, University of Tuebingen
+nedimsrndic AT users DOT sf DOT net
+
+libstem has been successfully installed on Ubuntu 10.10 and 11.04. Other 
+configurations have not been tested. The library does not link to any third 
+party code, so in theory it should be portable to other operating systems and 
+architectures with minimal effort. If you succeed in doing that, please notify 
+the maintainer. 
+
+PREREQUISITES
+
+The following packages are used: 
+
+	cmake	(source code building)
+	g++ 	(compiler)
+	swig	(optional, used for Python API generation)
+	python-dev	(optional, used for Python API)
+	libboost-test-dev	(optional, used for unit tests)
+
+INSTALLATION PROCEDURE
+
+The recommended method of installation is as follows:
+
+	0. Install prerequisites
+	1. Go to the project root 
+	2. Make a new directory (e. g. 'build') and go to this directory. 
+	3. Run cmake with all the options. This way the source will be built out of 
+	the source directory. The options are as follows: 
+		a) -DMAKE_API=1 - makes a Python API 
+		b) -DMAKE_TESTS=1 - makes unit tests
+		c) -DCMAKE_BUILD_TYPE={Release, Debug} - builds a release or debug 
+		configuration. Release configuration is recommended (enables compiler 
+		optimizations). 
+	4. Run make
+	5. As root, run make install
+
+EXAMPLE
+
+This is an example for the installation of libstem. In this example, libstem 
+was located in the '/home/user123/sources/libstem/' directory. The project is 
+built with a Python API and unit tests. The unit tests are run.
+
+sudo apt-get install cmake g++ swig python-dev libboost-test-dev
+cd /home/user123/sources/libstem/
+mkdir build; cd build
+cmake -DMAKE_API=1 -DMAKE_TESTS=1 -DCMAKE_BUILD_TYPE=Release ..
+make
+./test/test_kernel
+./test/test_ngram
+sudo make install

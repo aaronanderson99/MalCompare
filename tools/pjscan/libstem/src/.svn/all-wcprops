@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/p/pjscan/code/!svn/ver/10/trunk/libstem/src
+END
+NGramConf.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/p/pjscan/code/!svn/ver/10/trunk/libstem/src/NGramConf.h
+END
+Kernel.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/p/pjscan/code/!svn/ver/10/trunk/libstem/src/Kernel.cpp
+END
+util.h
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/p/pjscan/code/!svn/ver/10/trunk/libstem/src/util.h
+END
+NGramItem.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/p/pjscan/code/!svn/ver/10/trunk/libstem/src/NGramItem.cpp
+END
+NGram.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/p/pjscan/code/!svn/ver/10/trunk/libstem/src/NGram.cpp
+END
+Kernel.h
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/p/pjscan/code/!svn/ver/10/trunk/libstem/src/Kernel.h
+END
+NGramItem.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/p/pjscan/code/!svn/ver/10/trunk/libstem/src/NGramItem.h
+END
+NGram.h
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/p/pjscan/code/!svn/ver/10/trunk/libstem/src/NGram.h
+END
+NGramConf.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/p/pjscan/code/!svn/ver/10/trunk/libstem/src/NGramConf.cpp
+END
+CMakeLists.txt
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/p/pjscan/code/!svn/ver/10/trunk/libstem/src/CMakeLists.txt
+END
+util.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/p/pjscan/code/!svn/ver/10/trunk/libstem/src/util.cpp
+END

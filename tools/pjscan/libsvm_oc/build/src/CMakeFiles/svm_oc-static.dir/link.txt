@@ -1,0 +1,2 @@
+/usr/bin/ar cr libsvm_oc.a  CMakeFiles/svm_oc-static.dir/libsvm.cpp.o CMakeFiles/svm_oc-static.dir/SvmOc.cpp.o
+/usr/bin/ranlib libsvm_oc.a

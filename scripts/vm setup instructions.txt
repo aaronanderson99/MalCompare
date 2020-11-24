@@ -1,0 +1,127 @@
+
+*** ONLY works on 10.10 / 11.04 due to backwards compatibility constraints
+
+
+-Create Ubuntu 10.04 VM
+-Update /etc/apt/sources.list due to archived version:
+	sudo sed -i -re 's/([a-z]{2}\.)?archive.ubuntu.com|security.ubuntu.com/old-releases.ubuntu.com/g' /etc/apt/sources.list
+-Update:
+	sudo apt-get update && sudo apt-get dist-upgrade
+	sudo apt-get install subversion
+
+
+
+
+
+
+sudo apt-get install cmake libpoppler-dev g++ swig python-dev python-pip python libboost-thread-dev libboost-filesystem-dev libargtable2-dev zip
+
+
+
+
+
+
+
+
+For comparison tool:
+
+sudo apt-get install libgl1-mesa-glx libegl1-mesa libxrandr2 libxrandr2 libxss1 libxcursor1 libxcomposite1 libasound2 libxi6 libxtst6
+
+
+
+pip install --index-url=https://pypi.python.org/simple/virtualenv
+sudo apt-get install python-virtualenv
+virtualenv venv
+source venv/bin/activate
+pip install pandas
+pip install --index-url=https://pypi.python.org/simple/wheel
+pip install --index-url=https://pypi.python.org/simple/pandas
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+install.sh
+
+	### INSTALL DEPENDENCIES
+	sudo apt-get install cmake libpoppler-dev g++ swig python-dev libboost-thread-dev libboost-filesystem-dev libargtable2-dev zip
+	
+
+
+	### DOWNLOAD PACKAGE
+	svn checkout http://svn.code.sf.net/p/pjscan/code/trunk pjscan			# NOT https
+	cd pjscan
+
+
+
+	### INSTALL libpdfjs
+	sudo rm -r libpdfjs	
+	svn checkout http://svn.code.sf.net/p/libpdfjs/code/trunk libpdfjs		# NOT https
+	cd libpdfjs
+	mkdir build && cd build
+	cmake -DMAKE_API=1 -DCMAKE_BUILD_TYPE=Release ..				# NOT -DMAKE_TESTS=1
+	make
+	sudo make install
+	cd ../../
+	
+
+
+	### INSTALL libstem
+	cd libstem
+	mkdir build && cd build
+	cmake -DMAKE_API=1 -DCMAKE_BUILD_TYPE=Release ..				# NOT -DMAKE_TESTS=1
+	make
+	sudo make install
+	cd ../../
+	
+
+
+	### INSTALL libsvm_oc
+	cd libsvm_oc
+	mkdir build && cd build
+	cmake -DMAKE_API=1 -DCMAKE_BUILD_TYPE=Release ..				# NOT -DMAKE_TESTS=1
+	make
+	sudo make install
+	cd ../../
+
+	
+
+	### INSTALL pjscan-js
+	cd pjscan-js
+	wget http://ftp.mozilla.org/pub/mozilla.org/js/js185-1.0.0.tar.gz
+	tar xvfz js185-1.0.0.tar.gz
+	cd js-1.8.5/js/src
+	patch <../../../pjscan-js.patch			# NOT patch <../../../jsscan.h.patch && patch <../../../jsscan.cpp.patch
+	mkdir build-release && cd build-release
+	../configure
+	make
+	sudo cp ./js /usr/local/bin/pjscan-js
+
+
+
+	### INSTALL PJScan
+	cd ../../../../../pjscan
+	mkdir build && cd build
+	cmake -DCMAKE_BUILD_TYPE=Release ..
+	make
+	sudo make install
+
+
+
+
+
+
+	### DOWNLOAD CONTAGIO
+	wget -O contagio_bulk.zip https://www.dropbox.com/sh/i6ed6v32x0fp94z/AACuZWCgh8EB_r9-fQGvwY2la/BULK?dl=1
+	unzip contagio_bulk.zip
+	

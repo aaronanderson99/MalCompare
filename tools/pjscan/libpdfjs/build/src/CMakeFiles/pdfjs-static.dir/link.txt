@@ -1,0 +1,2 @@
+/usr/bin/ar cr libpdfjs.a  CMakeFiles/pdfjs-static.dir/PdfJsExtractor.cpp.o
+/usr/bin/ranlib libpdfjs.a
