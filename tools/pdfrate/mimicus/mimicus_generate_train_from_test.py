@@ -38,9 +38,9 @@ def main():
 			elif file in ["surrogate-scaled - original.csv", "surrogate - original.csv"]:
 				allOriginalRows.append(row)
 			else:
-				compositePath = "/home/pdfman/Downloads/project/aaron_scripts/split_dir/test/composite"
-				fullPathClean = path.join("/home/pdfman/Downloads/project/aaron_scripts/split_dir/test/composite", "CLEAN_"+path.basename(row[1]))
-				fullPathDirty = path.join("/home/pdfman/Downloads/project/aaron_scripts/split_dir/test/composite", "DIRTY_"+path.basename(row[1]))
+				compositePath = "/home/pdfman/Downloads/project/aaron_scripts/final/contagio_split/test/composite"
+				fullPathClean = path.join("/home/pdfman/Downloads/project/aaron_scripts/final/contagio_split/test/composite", path.basename(row[1]))
+				fullPathDirty = path.join("/home/pdfman/Downloads/project/aaron_scripts/final/contagio_split/test/composite", path.basename(row[1]))
 				# if not (path.exists(fullPathClean) or path.exists(fullPathDirty)):
 				# 	allOriginalRows.append(row)
 				# elif not (path.exists(path.splitext(fullPathClean)[0]) or path.exists(path.splitext(fullPathDirty)[0])):
