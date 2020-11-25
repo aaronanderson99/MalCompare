@@ -19,9 +19,8 @@ file.
 
 INSTALLATION
 
-(Note: Both scripts assume you are currently in the mimicus directory (the same
-directory where these scripts are stored), and that you have already installed
-Python 2.7 and Pip.)
+(Note: The setup script assumes that you have already installed Python 2.7 and
+Pip.)
 
 - Run "./setup_mimicus.sh" in the mimicus directory to install dependencies.
 - Run "./run_mimicus.sh TEST_DIR" in the mimicus directory to run experiments,
