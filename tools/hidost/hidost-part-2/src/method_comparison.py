@@ -1,7 +1,3 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-# method_comparison.py
-# Created on March 10, 2015.
 """
 Produces a plot comparing different methods on the same dataset.
 """
