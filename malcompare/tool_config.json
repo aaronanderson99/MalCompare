@@ -1,0 +1,26 @@
+[
+    {
+        "name": "PJScan",
+        "file": "pjscan_output.txt",
+        "false_positive_rate": 0.0000,
+        "false_negative_rate": 0.2278
+    },
+    {
+        "name": "PDFRate",
+        "file": "pdfrate_output.txt",
+        "false_positive_rate": 0.0089,
+        "false_negative_rate": 0.0057
+    },
+    {
+        "name": "Slayer",
+        "file": "slayer_output.txt",
+        "false_positive_rate": 0.0000,
+        "false_negative_rate": 0.0070
+    },
+    {
+        "name": "Hidost",
+        "file": "hidost_output.txt",
+        "false_positive_rate": 0.0008,
+        "false_negative_rate": 0.0009
+    }
+]

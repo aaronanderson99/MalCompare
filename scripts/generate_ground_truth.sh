@@ -29,8 +29,8 @@ do
     clean=`ls -l $clean_dir | grep "$(basename $file)" | wc -l`
     if [ $dirty -ne 0 ]
     then
-        echo "$file:malicious"
+        echo "$(basename $file):malicious"
     else
-        echo "$file:benign"
+        echo "$(basename $file):benign"
     fi
 done

@@ -20,3 +20,48 @@ INSTALLATION
 
 For installation instructions, please refer to the INSTALL file. 
 
+
+PJScan
+PJScan is a command-line utility that uses a learning algorithm to detect PDF files with JavaScript-related malware (i.e., malicious PDF files). The name PJScan is an acronym for "PDF and JavaScript Scanner".
+
+A detailed description of the detection technique used in PJScan is provided in the paper "Static Detection of Malicious JavaScript-Bearing PDF Documents" presented at ACSAC 2011 (website | pdf | bib).
+
+The learning algorithm
+PJScan utilizes a machine learning algorithm called a One-class Support Vector Machine (One-class SVM) to learn a model of malicious PDF files and then uses this model to classify previously unseen, suspicious PDF files. This is accomplished in a two-step process:
+
+Learning a model of malicious files.
+This step consists of applying PJScan's learning algorithm on a collection of malicious PDF files. PJScan analyzes these files, extracts JavaScript scripts from them (using libpdfjs) and applies a JavaScript tokenizer (pjscan-js, a modified version of Mozilla SpiderMonkey) in order to obtain the lexical properties of the scripts. The token sequences are then used as input (converted by libstem) for the machine learning algorithm (a One-class SVM implementation called libsvm_oc, based on libsvm), which outputs a model of known malicious PDF files. This model (saved as a file) is used as the input to the second step.
+
+Classification of previously unseen files.
+After a model of PDF files that are known to be malicious has been learned, it's used for the classification of previously unseen PDF files. Every PDF file to be classified has its JavaScript scripts extracted, tokenized and converted for use with the learning algorithm. Finally, the learning algorithm compares this information with the learned model and classifies the file as malicous or benign.
+
+Other uses
+In addition to learning and classification, PJScan also features some useful diagnostic tools:
+
+Dumping all JavaScript scripts from a PDF file.
+You can use this tool to extract the source code of all JavaScript scripts from a certain PDF file for further analysis. The scripts are saved as UTF-8-encoded text files with a .js extension in a directory.
+
+Analysis of machine learning features.
+Top N machine learning features are extracted from a PDF file and printed in comparison with the features found in a previously learned model. This is useful for the analysis of the impact of individual features of JavaScript code on the classification result.
+
+Technical information
+PJScan is written in C++ and uses a number of third-party and purpose-built software libraries. It currently only runs on Linux, but this might change in the future (please see the INSTALL file for more details).
+
+The following Debian packages are used:
+- cmake (used for source code building)
+- g++ (C++ compiler)
+- libboost-thread-dev (threading)
+- libboost-filesystem-dev (file system)
+
+The following custom libraries are required:
+- libpdfjs (available at http://sf.net/p/libpdfjs)
+- libstem (shipped with PJScan)
+- libsvm_oc (shipped with PJScan)
+- pjscan-js (shipped with PJScan)
+
+Other sources of information
+A detailed description of the detection technique used in PJScan is provided in the paper "Static Detection of Malicious JavaScript-Bearing PDF Documents" presented at ACSAC 2011 (website | pdf | bib).
+
+You can find further information about the project in the README file. The changes are summarized in the CHANGELOG. You can view the source code here or check it out from the SVN repository using the following command:
+
+svn checkout svn://svn.code.sf.net/p/pjscan/code/trunk pjscan-code

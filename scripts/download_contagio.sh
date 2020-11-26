@@ -28,12 +28,12 @@ mv CLEAN_PDF_9000_files clean
 mv MALWARE_PDF_PRE_04-2011_10982_files dirty
 rm *.zip *.7z
 cd clean
-rename "s/\'//" *
-rename "s/ //" *
+rename "s/\'//g" *
+rename "s/ //g" *
 cd ../dirty
 rm log.txt
-rename "s/\'//" *
-rename "s/ //" *
+rename "s/\'//g" *
+rename "s/ //g" *
 rename 's/(.*)/$1.pdf/' *
 cd ../
 mkdir composite
