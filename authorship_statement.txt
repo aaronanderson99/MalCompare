@@ -14,13 +14,13 @@ All of the following files were authored by and are the intellectual property of
 
 
 
-All other files found in the hidost directory are the intellectual property of Nedim Srndic and Pavel Laskov. Some slight modifications to these files have been made to suit the purposes of this project.
+All other files found in the tools/hidost directory are the intellectual property of Nedim Srndic and Pavel Laskov. Some slight modifications to these files have been made to suit the purposes of this project.
 
 
-All other files found in the mimicus directory are the intellectual property of Nedim Srndic and Pavel Laskov. Some slight modifications to these files have been made to suit the purposes of this project.
+All other files found in the tools/mimicus directory are the intellectual property of Nedim Srndic and Pavel Laskov. Some slight modifications to these files have been made to suit the purposes of this project.
 
 
-All other files found in the slayer directory are the intellectual property of Davide Maiorca, Giorgio Giacinto, and Igino Corona. Some slight modifications to these files have been made to suit the purposes of this project.
+All other files found in the tools/slayer directory are the intellectual property of Davide Maiorca, Giorgio Giacinto, and Igino Corona. Some slight modifications to these files have been made to suit the purposes of this project.
 
 
 All other files found in the <> directory are the intellectual property of <>. Some slight modifications to these files have been made to suit the purposes of this project.
