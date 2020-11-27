@@ -9,12 +9,13 @@ REQUIREMENTS:
 
 RUNNING STEPS:
 
-0. Navigate into the Slayer folder then to the src folder. Run commands from this folder. 
+0. Once you have navigated into the Slayer folder, run commands from this folder. 
 
-1. Setup a "benign" and "malicious" folder with the full Contagio database. Create an empty folder titled "test" and "test_results". Create empty folders "clustering" and "classifier".  
+1. Run the command "./download_contagio.sh". This will download the whole Contagio dataset into the folder. 
+	- If there is a permission error run the command "chmod +x download_contagio.sh" and rerun the previous command. 
 
-2. Run the command "python2 split_test_train.py". This command will fill the test folder with the test files
-	2a. The train/test ratio can be adjusted by the train_test_split call and the test_size parameter
+2. Run the command "./split.sh <path to the clean/benign pdfs> <path to the dirty/malicious pdfs> <train dataset size (0.0, 1.0)>"
+	If there is a permission error run the command "chmod +x split.sh" and rerun the previous command. 
 
 3. Run the command "python2 slayer.py cluster". A file called "keyword" should have been generated in the "clustering" folder.
 
