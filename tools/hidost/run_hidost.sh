@@ -8,6 +8,7 @@ then
     exit
 fi
 
-echo "file:prediction"
-cat $(dirname "$0")/stored_hidost_output.txt
+make -f $(dirname "$0”)/hidost-part-2/Makefile all 
+
+# cat $(dirname "$0")/stored_hidost_output.txt
 
