@@ -1,6 +1,15 @@
 All of the following files were authored by and are the intellectual property of Sheryl Ratnam, Brian Zhu, Thomas Light, and Aaron Anderson:
--
--
+- All files in the scripts/ directory
+- All files in the malcompare/ directory
+- compare_tools.sh
+- cross_validation.sh
+- download_contagio.sh
+- generate_ground_truth.sh
+- prediction.py
+- setup.sh
+- split.sh
+- tool_config.json
+- vm setup instructions.txt
 - /hidost/hidost-part-1/virusTotalComparison.py
 - /hidost/hidost-part-2/src/method_comparison.py
 - /hidost/hidost-part-2/src/experiment.py
@@ -14,13 +23,13 @@ All of the following files were authored by and are the intellectual property of
 
 
 
-All other files found in the tools/hidost directory are the intellectual property of Nedim Srndic and Pavel Laskov. Some slight modifications to these files have been made to suit the purposes of this project.
+All other files found in the tools/hidost directory are the intellectual property of Nedim Srndic and Pavel Laskov. Some modifications to these files have been made to suit the purposes of this project.
 
 
-All other files found in the tools/mimicus directory are the intellectual property of Nedim Srndic and Pavel Laskov. Some slight modifications to these files have been made to suit the purposes of this project.
+All other files found in the tools/mimicus directory are the intellectual property of Nedim Srndic and Pavel Laskov. Some modifications to these files have been made to suit the purposes of this project.
 
 
-All other files found in the tools/slayer directory are the intellectual property of Davide Maiorca, Giorgio Giacinto, and Igino Corona. Some slight modifications to these files have been made to suit the purposes of this project.
+All other files found in the tools/slayer directory are the intellectual property of Davide Maiorca, Giorgio Giacinto, and Igino Corona. Some modifications to these files have been made to suit the purposes of this project.
 
 
-All other files found in the <> directory are the intellectual property of <>. Some slight modifications to these files have been made to suit the purposes of this project.
+All other files found in the tools/pjscan directory are the intellectual property of Nedim Srndic and Pavel Laskov. Some modifications to these files have been made to suit the purposes of this project.
