@@ -1,6 +1,14 @@
 # MalCompare
 6220 Project Overview: MalCompare is an ensemble classifier that simultaneously compares predictions across all of the tools we test in our experiment and computes the probability that a file is malicious. 
 
+## IMPORTANT NOTES:
+### WARNING: This repository contains LIVE MALWARE under the MalCompare/datasets directory. Do NOT install this on an unsecure machine. The MalCompare/scripts/download_contagio.sh script also directly downloads a live malware dataset. Do NOT run this script from an unsecure machine. The creators of this project reccomend using an Ubnuntu 10.04 virtual machine.
+
+### Operating System/Version Notice: Due to OS and dependence requirements, the ONLY operating system all of the tools used have been tested to work with is Ubuntu 10.04. The comparison tool in MalCompare/malcompare, however, requires only python 2 and should work from any operating system.
+
+### Installation: To install, see the installation instructions for each tool under MalCompare/tools/
+
+
 ## (1) Source Code
 Links to open-source code packages:
 - PJSCan: https://sourceforge.net/p/pjscan/home/Home/
